@@ -1,0 +1,296 @@
+@import 'colors.less';
+
+* {
+  color: @neutral;
+}
+
+.light * {
+  color: @light-neutral;
+}
+
+.workspace {
+  background-color: @primary-100;
+}
+
+.workspace.light {
+  background-color: @light-primary-100;
+}
+
+.checkbox input[type='checkbox'] {
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+
+.theme-tranquil-ui {
+  // .atom-dock-inner {
+  // border: none !important;
+  // }
+
+  .atom-dock-mask {
+    background: @primary-100;
+  }
+
+  .atom-dock-content-wrapper {
+    // background-color: @primary-100 !important;
+    padding: 1px 0 1px 2px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .atom-dock-toggle-button-inner {
+    background-color: @primary-100;
+    border: none;
+  }
+
+  .horizontal {
+    gap: 1px;
+  }
+
+  .vertical {
+    gap: 1px;
+  }
+
+  button {
+    background: @primary-100;
+    border-radius: 0.35rem;
+    color: @neutral;
+  }
+
+  button:hover {
+    background: @primary-100;
+    color: @neutral;
+  }
+}
+
+.theme-tranquil-ui.light {
+  .atom-dock-mask {
+    background: @light-primary-100;
+  }
+
+  .atom-dock-toggle-button-inner {
+    background-color: @light-primary-100;
+  }
+
+  button {
+    background: @light-primary-100;
+    color: @light-neutral;
+  }
+
+  button:hover {
+    background: @light-primary-100;
+    color: @light-neutral;
+  }
+}
+
+.item-views {
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+}
+
+atom-pane-container atom-pane .item-views .pane-item {
+  color: @neutral !important;
+  background: @primary-25 !important;
+}
+
+.light atom-pane-container atom-pane .item-views .pane-item {
+  color: @light-neutral !important;
+  background: @light-primary-25 !important;
+}
+
+atom-pane-container atom-pane .item-views .pane-item .preview-header {
+  color: @neutral !important;
+  background: @primary-25 !important;
+}
+
+.light atom-pane-container atom-pane .item-views .pane-item .preview-header {
+  color: @light-neutral !important;
+  background: @light-primary-25 !important;
+}
+
+atom-pane-container atom-pane .item-views .pane-item .preview-header .btn:hover,
+atom-pane-container
+  atom-pane
+  .item-views
+  .pane-item
+  .preview-header
+  .btn:active,
+atom-pane-container
+  atom-pane
+  .item-views
+  .pane-item
+  .preview-header
+  .btn:focus {
+  color: @neutral !important;
+}
+
+.light
+  atom-pane-container
+  atom-pane
+  .item-views
+  .pane-item
+  .preview-header
+  .btn:hover,
+.light
+  atom-pane-container
+  atom-pane
+  .item-views
+  .pane-item
+  .preview-header
+  .btn:active,
+.light
+  atom-pane-container
+  atom-pane
+  .item-views
+  .pane-item
+  .preview-header
+  .btn:focus {
+  color: @light-neutral !important;
+}
+
+atom-panel-container atom-panel .project-find .header .description {
+  color: @primary-25 !important;
+}
+
+.light atom-panel-container atom-panel .project-find .header .description {
+  color: @light-primary-25 !important;
+}
+
+atom-panel-container
+  atom-panel
+  .project-find
+  .header
+  .options-label
+  span:nth-of-type(1) {
+  color: @primary-25 !important;
+}
+
+.light
+  atom-panel-container
+  atom-panel
+  .project-find
+  .header
+  .options-label
+  span:nth-of-type(1) {
+  color: @light-primary-25 !important;
+}
+
+atom-panel-container
+  atom-panel
+  .project-find
+  .header
+  .options-label
+  .btn-group-options
+  .btn {
+  background-color: @primary-25 !important;
+}
+
+.light
+  atom-panel-container
+  atom-panel
+  .project-find
+  .header
+  .options-label
+  .btn-group-options
+  .btn {
+  background-color: @light-primary-25 !important;
+}
+
+atom-panel-container
+  atom-panel
+  .project-find
+  .header
+  .options-label
+  .btn-group-options
+  .selected {
+  background-color: @primary-25 !important;
+}
+
+.light
+  atom-panel-container
+  atom-panel
+  .project-find
+  .header
+  .options-label
+  .btn-group-options
+  .selected {
+  background-color: @light-primary-25 !important;
+}
+
+atom-panel-container atom-panel .project-find .header .close-button .icon {
+  color: @primary-25 !important;
+}
+
+.light
+  atom-panel-container
+  atom-panel
+  .project-find
+  .header
+  .close-button
+  .icon {
+  color: @light-primary-25 !important;
+}
+
+// .btn-group .btn:hover {
+//   color: @neutral !important;
+// }
+
+// .btn-group .btn:active {
+//   color: @neutral !important;
+// }
+
+// .modal {
+//   position: fixed !important;
+//   inset: 0 !important;
+//   width: 100% !important;
+//   height: 100% !important;
+//   background: rgba(0, 4, 32, 0.25) !important;
+//   z-index: 100 !important;
+// }
+
+.modal .overlay {
+  color: inherit !important;
+  background: @primary-100 !important;
+  top: 50% !important;
+  // transform: translateY(-50%) !important;
+}
+
+.character-match {
+  color: @accent !important;
+}
+
+.light .character-match {
+  color: @light-accent !important;
+}
+
+.editor {
+  padding: 0px 8px;
+}
+
+.model .list-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal .list-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal .list-group li {
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.modal .list-group li.selected {
+  background: @primary-25 !important;
+}
+
+.section {
+  border-top: none !important;
+}
+
+.vertical-scrollbar,
+.horizontal-scrollbar {
+  display: none;
+}

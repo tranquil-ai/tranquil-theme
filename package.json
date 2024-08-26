@@ -1,0 +1,26 @@
+{
+  "keywords": [
+    "Tranquil UI Theme",
+    "Tranquil",
+    "Theme",
+    "Dark Theme",
+    "Light Theme"
+  ],
+  "license": "MIT",
+  "name": "tranquil-ui",
+  "theme": "ui",
+  "version": "0.1.0",
+  "main": "index",
+  "repository": "",
+  "configSchema": {
+    "lightmode": {
+      "type": "boolean",
+      "title": "Light Mode?",
+      "default": "false",
+      "order": 1
+    }
+  },
+  "engines": {
+    "atom": ">0.40.0"
+  }
+}

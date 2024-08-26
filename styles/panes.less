@@ -1,0 +1,39 @@
+.theme-tranquil-ui {
+  .pane,
+  .panes,
+  .horizontal {
+    border: none;
+    background-color: transparent;
+  }
+
+  .panes {
+    background-color: transparent;
+  }
+
+  .pane-row {
+    background: @primary-100;
+  }
+
+  .pane {
+    padding: 1px;
+    background-color: @primary-100;
+  }
+
+  atom-pane-container atom-pane .item-views .pane-item {
+    background: @primary-50 !important;
+  }
+}
+
+.theme-tranquil-ui.light {
+  .pane-row {
+    background: @light-primary-100;
+  }
+
+  .pane {
+    background-color: @light-primary-100;
+  }
+
+  atom-pane-container atom-pane .item-views .pane-item {
+    background: @light-primary-50 !important;
+  }
+}

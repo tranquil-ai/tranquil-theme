@@ -1,0 +1,90 @@
+.theme-tranquil-ui {
+  .tree-view {
+    background-color: @primary-50;
+    font-size: 14px;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+  }
+
+  .tree-view::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tree-view .tree-view-root {
+    padding-right: 0;
+  }
+
+  .tree-view .list-tree .selected::before {
+    background: transparent;
+  }
+
+  .file.selected .name {
+    color: @accent;
+  }
+
+  .tree-view .list-tree .file {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+  }
+
+  .directory {
+    box-sizing: border-box;
+    padding: 8px 0;
+    border-bottom: 2px solid @primary-100;
+    margin-left: -5px;
+    padding-left: 5px;
+  }
+
+  .directory:last-child {
+    border-bottom: none;
+  }
+
+  .current-path {
+    color: @neutral;
+  }
+
+  .welcome-card {
+    border: none;
+  }
+
+  .welcome-highlight {
+    color: @accent;
+  }
+
+  #add-projects-view .btn {
+    background: @primary-100;
+  }
+
+  #add-projects-view .btn:hover {
+    color: @neutral;
+  }
+}
+
+.theme-tranquil-ui.light {
+  .tree-view {
+    background-color: @light-primary-50;
+  }
+
+  .file.selected .name {
+    color: @light-accent;
+  }
+
+  .directory {
+    border-bottom: 2px solid @light-primary-100;
+  }
+
+  .current-path {
+    color: @light-neutral;
+  }
+
+  .welcome-highlight {
+    color: @light-accent;
+  }
+
+  #add-projects-view .btn {
+    background: @light-primary-100;
+  }
+
+  #add-projects-view .btn:hover {
+    color: @light-neutral;
+  }
+}

@@ -1,0 +1,49 @@
+.theme-tranquil-ui {
+  .image-controls,
+  .image-container {
+    background-color: @primary-25;
+  }
+
+  .image-controls-group {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .image-controls-group button {
+    color: @neutral;
+    background-color: @primary-100;
+    cursor: pointer;
+  }
+
+  .image-controls-group button:focus,
+  .image-controls-group button:active {
+    outline: none;
+  }
+
+  .image-controls-group {
+    padding-right: 1rem;
+  }
+
+  .image-controls-group.btn-group > .btn {
+    border: none;
+  }
+
+  .image-controls-color-white {
+    display: none;
+  }
+}
+
+.theme-tranquil-ui.light {
+  .image-controls,
+  .image-container {
+    background-color: @light-primary-25;
+  }
+
+  .image-controls-group button {
+    color: @light-neutral;
+    background-color: @light-primary-100;
+  }
+}

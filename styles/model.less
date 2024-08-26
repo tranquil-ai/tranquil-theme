@@ -1,0 +1,249 @@
+@modal-padding: 1.5rem;
+@modal-width: 56rem;
+
+.theme-tranquil-ui {
+  atom-panel-container.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  atom-panel.modal {
+    position: relative;
+    width: 100%;
+    max-width: @modal-width;
+    margin: 0 auto;
+    left: initial;
+    background-color: transparent;
+    padding: 1.5rem;
+
+    &.from-top {
+      // top: 30%;
+      margin-top: 22rem;
+      border-radius: 0.5rem;
+    }
+
+    atom-text-editor[mini] {
+      margin-bottom: 1.5rem;
+    }
+
+    .select-list ol.list-group,
+    &.select-list ol.list-group {
+      border: 1px solid @model-input-background;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      gap: 0;
+
+      &:empty {
+        border: none;
+        margin-top: 0;
+      }
+
+      li {
+        padding: 0.5rem 1rem;
+        // line-height: @ui-line-height;
+        border-bottom: 1px solid @model-input-background;
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+
+        .icon::before {
+          margin-left: 1px;
+        }
+
+        .icon.status {
+          float: right;
+          margin-left: 0.5rem;
+          &:before {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+
+        &.selected {
+          background: @model-input-background !important;
+
+          &.status.icon {
+            color: @accent;
+          }
+
+          &::before {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    .select-list .key-binding {
+      margin-top: -1px;
+      margin-left: 0.5rem;
+      margin-right: calc((-0.5 / 3) ~'+' 1px);
+      background-color: @accent;
+      color: @primary-100;
+    }
+
+    .select-list .primary-line {
+      display: block;
+    }
+
+    & > * {
+      position: relative; // fixes stacking order
+    }
+
+    .command-palette {
+      padding: 1px; // prevents the box-shadow of the input from being cut off
+    }
+
+    // Container
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      background-color: @model-background;
+      border-radius: 0.5rem;
+      box-shadow: 0 6px 12px -2px hsla(0, 0%, 0%, 0.4);
+    }
+
+    // Backdrop
+    // TODO: Add extra wrapper to translate individually or easier positioning
+    &:after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: @model-overlay-color;
+      opacity: @model-overlay-opacity;
+      backface-visibility: hidden; // fixes scrollbar on retina screens
+      animation: overlay-fade 0.24s cubic-bezier(0.215, 0.61, 0.355, 1);
+      -webkit-animation: overlay-fade 0.24s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    @keyframes overlay-fade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0.5y;
+      }
+    }
+
+    @-webkit-keyframes overlay-fade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .modal .list-group li {
+    border-radius: 0 !important;
+  }
+
+  .modal .list-group li:hover {
+    background: @model-input-background;
+  }
+
+  .from-top .command-palette .editor.mini {
+    background: @model-input-background;
+  }
+
+  .primary-line {
+    color: @model-text;
+  }
+
+  .primary-line {
+    color: @model-text;
+    opacity: 0.75;
+  }
+
+  .google-signin-container {
+    position: fixed !important;
+  }
+}
+
+.theme-tranquil-ui.light {
+  atom-panel.modal {
+    .select-list ol.list-group,
+    &.select-list ol.list-group {
+      border: 1px solid @light-model-input-background;
+
+      li {
+        border-bottom: 1px solid @light-model-input-background;
+
+        &.selected {
+          background: @light-model-input-background !important;
+
+          &.status.icon {
+            color: @light-accent;
+          }
+        }
+      }
+    }
+
+    .select-list .key-binding {
+      background-color: @light-accent;
+      color: @light-primary-100;
+    }
+
+    // Container
+    &:before {
+      background-color: @light-model-background;
+    }
+
+    // Backdrop
+    // TODO: Add extra wrapper to translate individually or easier positioning
+    &:after {
+      background: @light-model-overlay-color;
+      opacity: @light-model-overlay-opacity;
+    }
+
+    @keyframes overlay-fade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0.5y;
+      }
+    }
+
+    @-webkit-keyframes overlay-fade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .modal .list-group li:hover {
+    background: @light-model-input-background;
+  }
+
+  .from-top .command-palette .editor.mini {
+    background: @light-model-input-background;
+  }
+
+  .from-top .command-palette .editor.mini .syntax--text {
+    color: @light-model-text;
+  }
+
+  .primary-line {
+    color: @light-model-text;
+  }
+
+  .primary-line {
+    color: @light-model-text;
+  }
+}

@@ -1,0 +1,88 @@
+.theme-tranquil-ui {
+  .tab-bar {
+    box-shadow: none;
+  }
+
+  .tab-bar {
+    background: @primary-100;
+    gap: 4px;
+  }
+
+  .tab {
+    padding: 10px;
+    background: @primary-50;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .tab.active {
+    background: @primary-50;
+  }
+
+  .tab.active:not([data-type='TreeView']) {
+    background: @primary-25;
+  }
+
+  .tab .title {
+    font-size: 14px;
+  }
+
+  .tab .close-icon {
+    width: 2rem;
+    height: 2rem;
+    top: 50%;
+    right: 4px;
+    background-color: @primary-25;
+    border-radius: 0.2rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+  }
+
+  .tab .close-icon::before {
+    font-size: 16px;
+    margin-bottom: 5px;
+    position: static;
+  }
+
+  .tab.active .close-icon {
+    background-color: @primary-50;
+  }
+
+  .close-icon {
+    transform: translateY(-50%) scale(0.2);
+    opacity: 0;
+    transition: all 0.2s ease-out;
+  }
+
+  .tab:hover .close-icon {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.theme-tranquil-ui.light {
+  .tab-bar {
+    background: @light-primary-100;
+  }
+
+  .tab {
+    background: @light-primary-50;
+    color: @light-neutral;
+  }
+
+  .tab.active {
+    background: @light-primary-50;
+  }
+
+  .tab.active:not([data-type='TreeView']) {
+    background: @light-primary-25;
+  }
+
+  .tab .close-icon {
+    background-color: @light-primary-25;
+  }
+
+  .tab.active .close-icon {
+    background-color: @light-primary-50;
+  }
+}
