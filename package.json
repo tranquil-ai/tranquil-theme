@@ -11,7 +11,7 @@
   "theme": "ui",
   "version": "0.1.0",
   "main": "index",
-  "repository": "",
+  "repository": "https://github.com/tranquil-ai/tranquil-theme",
   "configSchema": {
     "lightmode": {
       "type": "boolean",
